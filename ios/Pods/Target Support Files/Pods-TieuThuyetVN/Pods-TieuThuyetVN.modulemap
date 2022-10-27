@@ -1,0 +1,6 @@
+module Pods_TieuThuyetVN {
+  umbrella header "Pods-TieuThuyetVN-umbrella.h"
+
+  export *
+  module * { export * }
+}
