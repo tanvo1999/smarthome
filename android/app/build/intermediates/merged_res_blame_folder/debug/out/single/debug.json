@@ -56,12 +56,12 @@
         "source": "/Users/vominhtan/Documents/study/DADN/smarthome/android/app/src/main/res/layout/launch_screen.xml"
     },
     {
-        "merged": "/Users/vominhtan/Documents/study/DADN/smarthome/android/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat",
-        "source": "/Users/vominhtan/Documents/study/DADN/smarthome/android/app/src/main/res/mipmap-hdpi/ic_launcher.png"
-    },
-    {
         "merged": "/Users/vominhtan/Documents/study/DADN/smarthome/android/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_launch_screen.png.flat",
         "source": "/Users/vominhtan/Documents/study/DADN/smarthome/android/app/src/main/res/drawable-xxxhdpi/launch_screen.png"
+    },
+    {
+        "merged": "/Users/vominhtan/Documents/study/DADN/smarthome/android/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "/Users/vominhtan/Documents/study/DADN/smarthome/android/app/src/main/res/mipmap-hdpi/ic_launcher.png"
     },
     {
         "merged": "/Users/vominhtan/Documents/study/DADN/smarthome/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_launcher.png.flat",

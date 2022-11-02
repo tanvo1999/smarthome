@@ -10,6 +10,7 @@ import {
 } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import messaging from "@react-native-firebase/messaging";
 
 import HomeScreen from "../component/Home";
 import DetailScreen from "../screen/Detail";
@@ -41,6 +42,19 @@ function getHeaderTitle(route) {
 
 const StackNavigator = ({ navigation }) => {
   const [initialRoute, setInitialRoute] = useState("Login");
+
+  useEffect(() => {
+    messaging().onNotificationOpenedApp((remoteMessage) => {});
+
+    messaging()
+      .getInitialNotification()
+      .then((remoteMessage) => {
+        if (remoteMessage) {
+          setInitialRoute(remoteMessage.data.type);
+        }
+      });
+  }, []);
+
   return (
     <NavigationContainer>
       <Stack.Navigator
@@ -87,7 +101,9 @@ const StackNavigator = ({ navigation }) => {
           name="Login"
           component={Login}
           options={({ navigation, route }) => ({
-            title: "Đăng nhập",
+            headerBackTitleVisible: false,
+            headerTitle: false,
+            headerShown: false,
           })}
         />
         <Stack.Screen

@@ -1,10 +1,13 @@
 import React, { Component, useEffect, useState } from 'react';
 import { Button, Input, ListItem, Text } from 'react-native-elements';
-import { StyleSheet, Dimensions, View, SafeAreaView } from 'react-native';
+import { StyleSheet, Dimensions, View, SafeAreaView, Platform } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import LinearGradient from 'react-native-linear-gradient';
 import TouchableScale from 'react-native-touchable-scale';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import messaging from "@react-native-firebase/messaging";
+
+import Login from '../api/auth/Login';
 
 const width = Dimensions.get('window').width;
 const height = Dimensions.get('window').height;
@@ -13,9 +16,27 @@ const FormLogin = ({navigation, route}) => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
-    useEffect(() => {
+    const requestIOSPermission = async () => {
+        const result = await messaging().hasPermission();
 
+        if (result !== messaging.AuthorizationStatus.AUTHORIZED) {
+            await messaging().requestPermission();
+        }
+    }
+
+    useEffect(() => {
+        if (Platform.OS === 'ios') {
+            requestIOSPermission();
+        }
     },[]);
+
+    const login = async () => {
+        const fcmtoken = await messaging().getToken();
+        Login(username, password, fcmtoken).then((data) => {
+            console.log(data)
+            
+        })
+    }
 
     return (
         <SafeAreaView style={{flex: 1}}>
@@ -52,7 +73,7 @@ const FormLogin = ({navigation, route}) => {
                 />
 
                 <ListItem 
-                    onPress={() => navigation.navigate('TabBottom')}
+                    onPress={() => login()}
                     Component={TouchableScale}
                     friction={90}
                     tension={100}

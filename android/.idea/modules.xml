@@ -2,7 +2,22 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/android.iml" filepath="$PROJECT_DIR$/.idea/modules/android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TieuThuyetVN.iml" filepath="$PROJECT_DIR$/.idea/modules/TieuThuyetVN.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/2002996135/TieuThuyetVN.@react-native-firebase_app.iml" filepath="$PROJECT_DIR$/.idea/modules/2002996135/TieuThuyetVN.@react-native-firebase_app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/316997898/TieuThuyetVN.@react-native-firebase_messaging.iml" filepath="$PROJECT_DIR$/.idea/modules/316997898/TieuThuyetVN.@react-native-firebase_messaging.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/TieuThuyetVN.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/TieuThuyetVN.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/626578718/TieuThuyetVN.notifee_react-native.iml" filepath="$PROJECT_DIR$/.idea/modules/626578718/TieuThuyetVN.notifee_react-native.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1256707191/TieuThuyetVN.react-native-async-storage_async-storage.iml" filepath="$PROJECT_DIR$/.idea/modules/1256707191/TieuThuyetVN.react-native-async-storage_async-storage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-241996685/TieuThuyetVN.react-native-community_masked-view.iml" filepath="$PROJECT_DIR$/.idea/modules/-241996685/TieuThuyetVN.react-native-community_masked-view.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/2002996135/TieuThuyetVN.react-native-firebase_app.iml" filepath="$PROJECT_DIR$/.idea/modules/2002996135/TieuThuyetVN.react-native-firebase_app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/316997898/TieuThuyetVN.react-native-firebase_messaging.iml" filepath="$PROJECT_DIR$/.idea/modules/316997898/TieuThuyetVN.react-native-firebase_messaging.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1461902396/TieuThuyetVN.react-native-gesture-handler.iml" filepath="$PROJECT_DIR$/.idea/modules/-1461902396/TieuThuyetVN.react-native-gesture-handler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-841951274/TieuThuyetVN.react-native-linear-gradient.iml" filepath="$PROJECT_DIR$/.idea/modules/-841951274/TieuThuyetVN.react-native-linear-gradient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/2125017048/TieuThuyetVN.react-native-reanimated.iml" filepath="$PROJECT_DIR$/.idea/modules/2125017048/TieuThuyetVN.react-native-reanimated.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/217471789/TieuThuyetVN.react-native-safe-area-context.iml" filepath="$PROJECT_DIR$/.idea/modules/217471789/TieuThuyetVN.react-native-safe-area-context.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/12869509/TieuThuyetVN.react-native-screens.iml" filepath="$PROJECT_DIR$/.idea/modules/12869509/TieuThuyetVN.react-native-screens.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-478120176/TieuThuyetVN.react-native-splash-screen.iml" filepath="$PROJECT_DIR$/.idea/modules/-478120176/TieuThuyetVN.react-native-splash-screen.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/429206162/TieuThuyetVN.react-native-vector-icons.iml" filepath="$PROJECT_DIR$/.idea/modules/429206162/TieuThuyetVN.react-native-vector-icons.iml" />
     </modules>
   </component>
 </project>

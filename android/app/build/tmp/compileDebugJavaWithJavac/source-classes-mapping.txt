@@ -1,14 +1,14 @@
 com/tieuthuyetvn/MainActivity.java
- com.tieuthuyetvn.MainActivity
+ vn.smarthomedadn.MainActivity
+vn/smarthomedadn/BuildConfig.java
+ vn.smarthomedadn.BuildConfig
 com/tieuthuyetvn/MainApplication.java
- com.tieuthuyetvn.MainApplication
- com.tieuthuyetvn.MainApplication$1
+ vn.smarthomedadn.MainApplication
+ vn.smarthomedadn.MainApplication$1
 com/tieuthuyetvn/ReactNativeFlipper.java
- com.tieuthuyetvn.ReactNativeFlipper
- com.tieuthuyetvn.ReactNativeFlipper$1
- com.tieuthuyetvn.ReactNativeFlipper$2
- com.tieuthuyetvn.ReactNativeFlipper$2$1
-com/tieuthuyetvn/BuildConfig.java
- com.tieuthuyetvn.BuildConfig
+ vn.smarthomedadn.ReactNativeFlipper
+ vn.smarthomedadn.ReactNativeFlipper$1
+ vn.smarthomedadn.ReactNativeFlipper$2
+ vn.smarthomedadn.ReactNativeFlipper$2$1
 com/facebook/react/PackageList.java
  com.facebook.react.PackageList
