@@ -1,5 +1,5 @@
 const logout = (token, fcm_token) => (
-    fetch(`http://127.0.0.1:8000/api/auth/logout?fcm_token=${fcm_token}`, {
+    fetch(`http://192.168.1.7:8080/api/auth/logout?fcm_token=${fcm_token}`, {
         method: 'POST',
         headers: {
             'Accept': 'application/json',

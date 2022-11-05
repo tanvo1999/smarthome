@@ -1,6 +1,6 @@
 import React, { Component, useEffect, useState } from 'react';
 import { Button, Input, ListItem, Text } from 'react-native-elements';
-import { StyleSheet, Dimensions, View, SafeAreaView, Platform } from 'react-native';
+import { StyleSheet, Dimensions, View, SafeAreaView, Platform, Alert } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import LinearGradient from 'react-native-linear-gradient';
 import TouchableScale from 'react-native-touchable-scale';
@@ -13,7 +13,7 @@ const width = Dimensions.get('window').width;
 const height = Dimensions.get('window').height;
 
 const FormLogin = ({navigation, route}) => {
-    const [username, setUsername] = useState('');
+    const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
     const requestIOSPermission = async () => {
@@ -34,9 +34,18 @@ const FormLogin = ({navigation, route}) => {
     const login = async () => {
         const fcmtoken = await messaging().getToken();
         console.log(fcmtoken)
-        Login(username, password, fcmtoken).then((data) => {
-            console.log(data)
-            
+        Login(email, password, fcmtoken).then((data) => {
+            if(data.status === false) {
+                Alert.alert(
+                    "Thông báo",
+                    "Đăng nhập thất bại. Vui lòng kiểm tra lại email / mật khẩu!",
+                    [
+                        { text: "Đóng" }
+                    ],
+                );
+            } else {
+                navigation.navigate('TabBottom')
+            }
         })
     }
 
@@ -49,8 +58,8 @@ const FormLogin = ({navigation, route}) => {
                 <Input 
                     label="Tài khoản đăng nhập"
                     placeholder="Nhập tên tài khoản"
-                    value={username}
-                    onChangeText={(txt) => setUsername(txt)}
+                    value={email}
+                    onChangeText={(txt) => setEmail(txt)}
                     autoCapitalize={'none'}
                     leftIcon={
                         <Icon
