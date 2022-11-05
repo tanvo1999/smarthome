@@ -25,6 +25,7 @@ const FormLogin = ({navigation, route}) => {
     }
 
     useEffect(() => {
+        
         if (Platform.OS === 'ios') {
             requestIOSPermission();
         }
@@ -32,6 +33,7 @@ const FormLogin = ({navigation, route}) => {
 
     const login = async () => {
         const fcmtoken = await messaging().getToken();
+        console.log(fcmtoken)
         Login(username, password, fcmtoken).then((data) => {
             console.log(data)
             
