@@ -6,8 +6,10 @@ import LinearGradient from 'react-native-linear-gradient';
 import TouchableScale from 'react-native-touchable-scale';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import messaging from "@react-native-firebase/messaging";
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import Login from '../api/auth/Login';
+import CheckAuth from '../component/CheckAuth';
 
 const width = Dimensions.get('window').width;
 const height = Dimensions.get('window').height;
@@ -25,16 +27,27 @@ const FormLogin = ({navigation, route}) => {
     }
 
     useEffect(() => {
-        
         if (Platform.OS === 'ios') {
             requestIOSPermission();
         }
+        CheckAuth().then((data) => {
+            if (data !== -1) {
+                navigation.navigate('TabBottom');
+            }
+        });
     },[]);
+
+    const storeData = async (item, value) => {
+        try {
+            await AsyncStorage.setItem(item, JSON.stringify(value))
+        } catch (e) {
+            console.error('AsyncStorage error: ' + e.message);
+        }
+    }
 
     const login = async () => {
         const fcmtoken = await messaging().getToken();
-        console.log(fcmtoken)
-        Login(email, password, fcmtoken).then((data) => {
+        Login(email, password, fcmtoken, Platform.OS).then((data) => {
             if(data.status === false) {
                 Alert.alert(
                     "Thông báo",
@@ -44,6 +57,7 @@ const FormLogin = ({navigation, route}) => {
                     ],
                 );
             } else {
+                storeData('user', data.data);
                 navigation.navigate('TabBottom')
             }
         })
@@ -56,8 +70,8 @@ const FormLogin = ({navigation, route}) => {
             </View>
             <View style={{marginHorizontal: 20, justifyContent: 'center', alignItems: 'center'}}>
                 <Input 
-                    label="Tài khoản đăng nhập"
-                    placeholder="Nhập tên tài khoản"
+                    label="Email"
+                    placeholder="Nhập email"
                     value={email}
                     onChangeText={(txt) => setEmail(txt)}
                     autoCapitalize={'none'}

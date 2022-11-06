@@ -13,6 +13,9 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 import messaging from "@react-native-firebase/messaging";
 
 import HomeScreen from "../component/Home";
+import Temperature from "../screen/Temperature";
+import Gas from "../screen/Gas";
+import Door from "../screen/Door";
 import DetailScreen from "../screen/Detail";
 import Login from "./Login";
 import SettingScreen from "../screen/Setting";
@@ -88,6 +91,27 @@ const StackNavigator = ({ navigation }) => {
           options={{
             headerTitle: false,
             headerLeft: (props) => <LogoTitle {...props} />,
+          }}
+        />
+        <Stack.Screen
+          name="Temperature"
+          component={Temperature}
+          options={{
+            title: "Nhiệt độ",
+          }}
+        />
+        <Stack.Screen
+          name="Door"
+          component={Door}
+          options={{
+            title: "Trạng thái cửa",
+          }}
+        />
+        <Stack.Screen
+          name="Gas"
+          component={Gas}
+          options={{
+            title: "Nồng độ khí gas",
           }}
         />
         <Stack.Screen
