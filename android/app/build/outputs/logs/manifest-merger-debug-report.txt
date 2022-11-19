@@ -15,6 +15,7 @@ MERGED from [:react-native-async-storage_async-storage] /Users/vominhtan/Documen
 MERGED from [:react-native-community_masked-view] /Users/vominhtan/Documents/study/DADN/smarthome/node_modules/@react-native-community/masked-view/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-firebase_app] /Users/vominhtan/Documents/study/DADN/smarthome/node_modules/@react-native-firebase/app/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-29:12
 MERGED from [:react-native-firebase_messaging] /Users/vominhtan/Documents/study/DADN/smarthome/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-45:12
+MERGED from [:react-native-device-info] /Users/vominhtan/Documents/study/DADN/smarthome/node_modules/react-native-device-info/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-gesture-handler] /Users/vominhtan/Documents/study/DADN/smarthome/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-safe-area-context] /Users/vominhtan/Documents/study/DADN/smarthome/node_modules/react-native-safe-area-context/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-screens] /Users/vominhtan/Documents/study/DADN/smarthome/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
@@ -54,6 +55,7 @@ MERGED from [androidx.appcompat:appcompat-resources:1.1.0] /Users/vominhtan/.gra
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/vominhtan/.gradle/caches/transforms-2/files-2.1/b23242df18161113563f0278e893b4d8/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/vominhtan/.gradle/caches/transforms-2/files-2.1/4d7703a2e6f837179a3ea70d2ff0eda0/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.gms:play-services-auth:19.2.0] /Users/vominhtan/.gradle/caches/transforms-2/files-2.1/e592dcb5d78b81f339f88c9c32d0e5e6/jetified-play-services-auth-19.2.0/AndroidManifest.xml:17:1-40:12
+MERGED from [com.google.android.gms:play-services-iid:17.0.0] /Users/vominhtan/.gradle/caches/transforms-2/files-2.1/7f07675c762ff6deaec67dfba6c0da34/jetified-play-services-iid-17.0.0/AndroidManifest.xml:17:1-28:12
 MERGED from [com.google.firebase:firebase-installations:17.0.0] /Users/vominhtan/.gradle/caches/transforms-2/files-2.1/bfaa8387d061af9163bf78fbdd75ee7b/jetified-firebase-installations-17.0.0/AndroidManifest.xml:2:1-24:12
 MERGED from [com.google.firebase:firebase-common:20.0.0] /Users/vominhtan/.gradle/caches/transforms-2/files-2.1/cf44503f512bd01edbb9a42565c54f02/jetified-firebase-common-20.0.0/AndroidManifest.xml:15:1-40:12
 MERGED from [com.google.android.gms:play-services-auth-api-phone:17.0.0] /Users/vominhtan/.gradle/caches/transforms-2/files-2.1/4b30a73422429339aeeb7a02a5f9e95b/jetified-play-services-auth-api-phone-17.0.0/AndroidManifest.xml:2:1-7:12
@@ -97,6 +99,7 @@ MERGED from [com.google.firebase:firebase-encoders-json:18.0.0] /Users/vominhtan
 MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/vominhtan/.gradle/caches/transforms-2/files-2.1/0ec425d10e9cd0a7d1f8766215060f6c/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/vominhtan/.gradle/caches/transforms-2/files-2.1/246bb74f21f794f562408437838876d0/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] /Users/vominhtan/.gradle/caches/transforms-2/files-2.1/bd15801355aaaa58cad706d065af2d99/print-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.installreferrer:installreferrer:1.1.2] /Users/vominhtan/.gradle/caches/transforms-2/files-2.1/e9e5283aca20052cecde6d5aca72be49/jetified-installreferrer-1.1.2/AndroidManifest.xml:2:1-13:12
 MERGED from [com.facebook.fresco:fbcore:2.2.0] /Users/vominhtan/.gradle/caches/transforms-2/files-2.1/2cf8801f6c95f5c1a6813081d88347ab/jetified-fbcore-2.2.0/AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.fresco:ui-common:2.2.0] /Users/vominhtan/.gradle/caches/transforms-2/files-2.1/6945c5ffd2598af04fbec38cf9dac32f/jetified-ui-common-2.2.0/AndroidManifest.xml:2:1-9:12
 INJECTED from /Users/vominhtan/Documents/study/DADN/smarthome/android/app/src/debug/AndroidManifest.xml:2:1-13:12
@@ -129,6 +132,8 @@ MERGED from [:react-native-firebase_messaging] /Users/vominhtan/Documents/study/
 MERGED from [:react-native-firebase_messaging] /Users/vominhtan/Documents/study/DADN/smarthome/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-67
 MERGED from [com.google.android.datatransport:transport-backend-cct:3.0.0] /Users/vominhtan/.gradle/caches/transforms-2/files-2.1/c1b875a1567d127c75e5d36185d64378/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:26:5-67
 MERGED from [com.google.android.datatransport:transport-backend-cct:3.0.0] /Users/vominhtan/.gradle/caches/transforms-2/files-2.1/c1b875a1567d127c75e5d36185d64378/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:26:5-67
+MERGED from [com.google.android.gms:play-services-iid:17.0.0] /Users/vominhtan/.gradle/caches/transforms-2/files-2.1/7f07675c762ff6deaec67dfba6c0da34/jetified-play-services-iid-17.0.0/AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-iid:17.0.0] /Users/vominhtan/.gradle/caches/transforms-2/files-2.1/7f07675c762ff6deaec67dfba6c0da34/jetified-play-services-iid-17.0.0/AndroidManifest.xml:24:5-67
 MERGED from [com.google.firebase:firebase-installations:17.0.0] /Users/vominhtan/.gradle/caches/transforms-2/files-2.1/bfaa8387d061af9163bf78fbdd75ee7b/jetified-firebase-installations-17.0.0/AndroidManifest.xml:11:5-67
 MERGED from [com.google.firebase:firebase-installations:17.0.0] /Users/vominhtan/.gradle/caches/transforms-2/files-2.1/bfaa8387d061af9163bf78fbdd75ee7b/jetified-firebase-installations-17.0.0/AndroidManifest.xml:11:5-67
 MERGED from [com.google.android.gms:play-services-cloud-messaging:16.0.0] /Users/vominhtan/.gradle/caches/transforms-2/files-2.1/8177b36e1a5265871005b5ba810d7fe4/jetified-play-services-cloud-messaging-16.0.0/AndroidManifest.xml:8:5-67
@@ -179,6 +184,8 @@ MERGED from [com.google.android.datatransport:transport-runtime:3.0.0] /Users/vo
 MERGED from [com.google.android.datatransport:transport-runtime:3.0.0] /Users/vominhtan/.gradle/caches/transforms-2/files-2.1/2ebfb026f9cdcbb544bc48708eefe8cc/jetified-transport-runtime-3.0.0/AndroidManifest.xml:25:5-39:19
 MERGED from [com.google.android.gms:play-services-auth:19.2.0] /Users/vominhtan/.gradle/caches/transforms-2/files-2.1/e592dcb5d78b81f339f88c9c32d0e5e6/jetified-play-services-auth-19.2.0/AndroidManifest.xml:22:5-38:19
 MERGED from [com.google.android.gms:play-services-auth:19.2.0] /Users/vominhtan/.gradle/caches/transforms-2/files-2.1/e592dcb5d78b81f339f88c9c32d0e5e6/jetified-play-services-auth-19.2.0/AndroidManifest.xml:22:5-38:19
+MERGED from [com.google.android.gms:play-services-iid:17.0.0] /Users/vominhtan/.gradle/caches/transforms-2/files-2.1/7f07675c762ff6deaec67dfba6c0da34/jetified-play-services-iid-17.0.0/AndroidManifest.xml:26:5-20
+MERGED from [com.google.android.gms:play-services-iid:17.0.0] /Users/vominhtan/.gradle/caches/transforms-2/files-2.1/7f07675c762ff6deaec67dfba6c0da34/jetified-play-services-iid-17.0.0/AndroidManifest.xml:26:5-20
 MERGED from [com.google.firebase:firebase-installations:17.0.0] /Users/vominhtan/.gradle/caches/transforms-2/files-2.1/bfaa8387d061af9163bf78fbdd75ee7b/jetified-firebase-installations-17.0.0/AndroidManifest.xml:14:5-22:19
 MERGED from [com.google.firebase:firebase-installations:17.0.0] /Users/vominhtan/.gradle/caches/transforms-2/files-2.1/bfaa8387d061af9163bf78fbdd75ee7b/jetified-firebase-installations-17.0.0/AndroidManifest.xml:14:5-22:19
 MERGED from [com.google.firebase:firebase-common:20.0.0] /Users/vominhtan/.gradle/caches/transforms-2/files-2.1/cf44503f512bd01edbb9a42565c54f02/jetified-firebase-common-20.0.0/AndroidManifest.xml:25:5-38:19
@@ -199,6 +206,8 @@ MERGED from [androidx.core:core:1.2.0] /Users/vominhtan/.gradle/caches/transform
 MERGED from [androidx.core:core:1.2.0] /Users/vominhtan/.gradle/caches/transforms-2/files-2.1/a4a010e99880a4d81ee6a7ed3ad8449a/core-1.2.0/AndroidManifest.xml:24:5-89
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/vominhtan/.gradle/caches/transforms-2/files-2.1/6f1358187ccdd23dcdb55c0beaaaa5f2/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/vominhtan/.gradle/caches/transforms-2/files-2.1/6f1358187ccdd23dcdb55c0beaaaa5f2/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
+MERGED from [com.android.installreferrer:installreferrer:1.1.2] /Users/vominhtan/.gradle/caches/transforms-2/files-2.1/e9e5283aca20052cecde6d5aca72be49/jetified-installreferrer-1.1.2/AndroidManifest.xml:11:5-20
+MERGED from [com.android.installreferrer:installreferrer:1.1.2] /Users/vominhtan/.gradle/caches/transforms-2/files-2.1/e9e5283aca20052cecde6d5aca72be49/jetified-installreferrer-1.1.2/AndroidManifest.xml:11:5-20
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.2.0] /Users/vominhtan/.gradle/caches/transforms-2/files-2.1/a4a010e99880a4d81ee6a7ed3ad8449a/core-1.2.0/AndroidManifest.xml:24:18-86
 	android:label
@@ -271,6 +280,8 @@ MERGED from [:react-native-firebase_app] /Users/vominhtan/Documents/study/DADN/s
 MERGED from [:react-native-firebase_app] /Users/vominhtan/Documents/study/DADN/smarthome/node_modules/@react-native-firebase/app/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-firebase_messaging] /Users/vominhtan/Documents/study/DADN/smarthome/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-firebase_messaging] /Users/vominhtan/Documents/study/DADN/smarthome/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-device-info] /Users/vominhtan/Documents/study/DADN/smarthome/node_modules/react-native-device-info/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-device-info] /Users/vominhtan/Documents/study/DADN/smarthome/node_modules/react-native-device-info/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-gesture-handler] /Users/vominhtan/Documents/study/DADN/smarthome/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-gesture-handler] /Users/vominhtan/Documents/study/DADN/smarthome/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-safe-area-context] /Users/vominhtan/Documents/study/DADN/smarthome/node_modules/react-native-safe-area-context/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
@@ -349,6 +360,8 @@ MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/vominhtan/.gradle/
 MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/vominhtan/.gradle/caches/transforms-2/files-2.1/4d7703a2e6f837179a3ea70d2ff0eda0/interpolator-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-auth:19.2.0] /Users/vominhtan/.gradle/caches/transforms-2/files-2.1/e592dcb5d78b81f339f88c9c32d0e5e6/jetified-play-services-auth-19.2.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-auth:19.2.0] /Users/vominhtan/.gradle/caches/transforms-2/files-2.1/e592dcb5d78b81f339f88c9c32d0e5e6/jetified-play-services-auth-19.2.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-iid:17.0.0] /Users/vominhtan/.gradle/caches/transforms-2/files-2.1/7f07675c762ff6deaec67dfba6c0da34/jetified-play-services-iid-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-iid:17.0.0] /Users/vominhtan/.gradle/caches/transforms-2/files-2.1/7f07675c762ff6deaec67dfba6c0da34/jetified-play-services-iid-17.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-installations:17.0.0] /Users/vominhtan/.gradle/caches/transforms-2/files-2.1/bfaa8387d061af9163bf78fbdd75ee7b/jetified-firebase-installations-17.0.0/AndroidManifest.xml:6:5-8:41
 MERGED from [com.google.firebase:firebase-installations:17.0.0] /Users/vominhtan/.gradle/caches/transforms-2/files-2.1/bfaa8387d061af9163bf78fbdd75ee7b/jetified-firebase-installations-17.0.0/AndroidManifest.xml:6:5-8:41
 MERGED from [com.google.firebase:firebase-common:20.0.0] /Users/vominhtan/.gradle/caches/transforms-2/files-2.1/cf44503f512bd01edbb9a42565c54f02/jetified-firebase-common-20.0.0/AndroidManifest.xml:20:5-22:41
@@ -435,6 +448,8 @@ MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/vominhtan/.gradle/caches/transforms-2/files-2.1/246bb74f21f794f562408437838876d0/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.print:print:1.0.0] /Users/vominhtan/.gradle/caches/transforms-2/files-2.1/bd15801355aaaa58cad706d065af2d99/print-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.print:print:1.0.0] /Users/vominhtan/.gradle/caches/transforms-2/files-2.1/bd15801355aaaa58cad706d065af2d99/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.installreferrer:installreferrer:1.1.2] /Users/vominhtan/.gradle/caches/transforms-2/files-2.1/e9e5283aca20052cecde6d5aca72be49/jetified-installreferrer-1.1.2/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.installreferrer:installreferrer:1.1.2] /Users/vominhtan/.gradle/caches/transforms-2/files-2.1/e9e5283aca20052cecde6d5aca72be49/jetified-installreferrer-1.1.2/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:fbcore:2.2.0] /Users/vominhtan/.gradle/caches/transforms-2/files-2.1/2cf8801f6c95f5c1a6813081d88347ab/jetified-fbcore-2.2.0/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:fbcore:2.2.0] /Users/vominhtan/.gradle/caches/transforms-2/files-2.1/2cf8801f6c95f5c1a6813081d88347ab/jetified-fbcore-2.2.0/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:ui-common:2.2.0] /Users/vominhtan/.gradle/caches/transforms-2/files-2.1/6945c5ffd2598af04fbec38cf9dac32f/jetified-ui-common-2.2.0/AndroidManifest.xml:5:5-7:41
@@ -887,6 +902,8 @@ ADDED from [androidx.room:room-runtime:2.2.5] /Users/vominhtan/.gradle/caches/tr
 		ADDED from [androidx.room:room-runtime:2.2.5] /Users/vominhtan/.gradle/caches/transforms-2/files-2.1/5aca0c39a225deefba9bf3efa80403a5/room-runtime-2.2.5/AndroidManifest.xml:26:13-74
 uses-permission#com.google.android.c2dm.permission.RECEIVE
 ADDED from [com.google.firebase:firebase-messaging:22.0.0] /Users/vominhtan/.gradle/caches/transforms-2/files-2.1/659420486e587c7496744d9234de768f/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:25:5-82
+MERGED from [com.google.android.gms:play-services-iid:17.0.0] /Users/vominhtan/.gradle/caches/transforms-2/files-2.1/7f07675c762ff6deaec67dfba6c0da34/jetified-play-services-iid-17.0.0/AndroidManifest.xml:23:5-82
+MERGED from [com.google.android.gms:play-services-iid:17.0.0] /Users/vominhtan/.gradle/caches/transforms-2/files-2.1/7f07675c762ff6deaec67dfba6c0da34/jetified-play-services-iid-17.0.0/AndroidManifest.xml:23:5-82
 MERGED from [com.google.android.gms:play-services-cloud-messaging:16.0.0] /Users/vominhtan/.gradle/caches/transforms-2/files-2.1/8177b36e1a5265871005b5ba810d7fe4/jetified-play-services-cloud-messaging-16.0.0/AndroidManifest.xml:11:5-82
 MERGED from [com.google.android.gms:play-services-cloud-messaging:16.0.0] /Users/vominhtan/.gradle/caches/transforms-2/files-2.1/8177b36e1a5265871005b5ba810d7fe4/jetified-play-services-cloud-messaging-16.0.0/AndroidManifest.xml:11:5-82
 	android:name
@@ -999,3 +1016,7 @@ ADDED from [com.google.android.gms:play-services-basement:17.6.0] /Users/vominht
 		ADDED from [com.google.android.gms:play-services-basement:17.6.0] /Users/vominhtan/.gradle/caches/transforms-2/files-2.1/a4af859e11852ee18dca6d122327c0ac/jetified-play-services-basement-17.6.0/AndroidManifest.xml:25:13-66
 	android:name
 		ADDED from [com.google.android.gms:play-services-basement:17.6.0] /Users/vominhtan/.gradle/caches/transforms-2/files-2.1/a4af859e11852ee18dca6d122327c0ac/jetified-play-services-basement-17.6.0/AndroidManifest.xml:24:13-58
+uses-permission#com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE
+ADDED from [com.android.installreferrer:installreferrer:1.1.2] /Users/vominhtan/.gradle/caches/transforms-2/files-2.1/e9e5283aca20052cecde6d5aca72be49/jetified-installreferrer-1.1.2/AndroidManifest.xml:9:5-110
+	android:name
+		ADDED from [com.android.installreferrer:installreferrer:1.1.2] /Users/vominhtan/.gradle/caches/transforms-2/files-2.1/e9e5283aca20052cecde6d5aca72be49/jetified-installreferrer-1.1.2/AndroidManifest.xml:9:22-107

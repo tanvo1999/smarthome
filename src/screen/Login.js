@@ -7,6 +7,7 @@ import TouchableScale from 'react-native-touchable-scale';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import messaging from "@react-native-firebase/messaging";
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import DeviceInfo from 'react-native-device-info';
 
 import Login from '../api/auth/Login';
 import CheckAuth from '../component/CheckAuth';
@@ -17,6 +18,10 @@ const height = Dimensions.get('window').height;
 const FormLogin = ({navigation, route}) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [device, setDevice] = useState({
+        name: '',
+        id: ''
+    });
 
     const requestIOSPermission = async () => {
         const result = await messaging().hasPermission();
@@ -35,6 +40,27 @@ const FormLogin = ({navigation, route}) => {
                 navigation.navigate('TabBottom');
             }
         });
+        DeviceInfo.getDeviceName().then((deviceName) => {
+            setDevice(prevState => ({
+                ...prevState,
+                name: deviceName
+            }));
+        });
+        if (Platform.OS === 'android') {
+            DeviceInfo.getAndroidId().then((device) => {
+                setDevice(prevState => ({
+                    ...prevState,
+                    id: device
+                }));
+            });
+        } else {
+            DeviceInfo.syncUniqueId().then((device) => {
+                setDevice(prevState => ({
+                    ...prevState,
+                    id: device
+                }));
+            });
+        }
     },[]);
 
     const storeData = async (item, value) => {
@@ -47,7 +73,7 @@ const FormLogin = ({navigation, route}) => {
 
     const login = async () => {
         const fcmtoken = await messaging().getToken();
-        Login(email, password, fcmtoken, Platform.OS).then((data) => {
+        Login(email, password, fcmtoken, Platform.OS, device.id, device.name).then((data) => {
             if(data.status === false) {
                 Alert.alert(
                     "Thông báo",

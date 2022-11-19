@@ -142,6 +142,7 @@
     <orderEntry type="module" module-name="TieuThuyetVN.react-native-splash-screen" />
     <orderEntry type="module" module-name="TieuThuyetVN.react-native-async-storage_async-storage" />
     <orderEntry type="module" module-name="TieuThuyetVN.react-native-community_masked-view" />
+    <orderEntry type="module" module-name="TieuThuyetVN.react-native-device-info" />
     <orderEntry type="module" module-name="TieuThuyetVN.react-native-gesture-handler" />
     <orderEntry type="module" module-name="TieuThuyetVN.react-native-linear-gradient" />
     <orderEntry type="module" module-name="TieuThuyetVN.react-native-safe-area-context" />

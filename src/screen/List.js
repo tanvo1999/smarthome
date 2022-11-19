@@ -9,39 +9,79 @@ import {
   ImageBackground,
   TouchableOpacity,
   Text,
+  Alert,
 } from "react-native";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import LinearGradient from "react-native-linear-gradient";
 import TouchableScale from "react-native-touchable-scale";
 
+import DataTemp from "../api/data/Temp";
+import DataGas from "../api/data/Gas";
+import CheckAuth from "../component/CheckAuth";
+import Loading from "../component/Loading";
+
 const width = Dimensions.get("window").width;
 const height = Dimensions.get("window").height;
 
-const list = [
-  {
-    name: "Xem nhiệt độ",
-    navigator: "Temperature",
-    icon: "temperature-celsius",
-  },
-  {
-    name: "Xem trạng thái cửa",
-    navigator: "Door",
-    icon: "door",
-  },
-  {
-    name: "Xem nồng độ khí gas",
-    navigator: "Gas",
-    icon: "fire",
-  },
-];
-
 const List = ({ navigation }) => {
+  const [dataUser, setDataUser] = useState({});
+  const [refreshing, setRefreshing] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [light, setLight] = useState(1);
+  const [dataList, setDataList] = useState({
+    temp: "",
+    gas: "",
+    rain: 28,
+    sound: 12,
+  });
 
-  useEffect(() => {}, []);
+  const refresh = () => {
+    setLoading(true);
+    setRefreshing(false);
+    getData(dataUser.remember_token);
+  };
+
+  const getData = (remember_token) => {
+    DataGas(remember_token).then((data) => {
+      if (data.status === "success") {
+        setDataList((prevState) => ({
+          ...prevState,
+          gas: data.data.temp,
+        }));
+      } else {
+        Alert.alert("Lỗi", "Không thể lấy được dữ liệu của khí gas!", [
+          { text: "Đóng" },
+        ]);
+      }
+    });
+    DataTemp(remember_token).then((data) => {
+      if (data.status === "success") {
+        setDataList((prevState) => ({
+          ...prevState,
+          temp: data.data.temp,
+        }));
+        setLoading(false);
+      } else {
+        Alert.alert("Lỗi", "Không thể lấy được dữ liệu của khí gas!", [
+          { text: "Đóng" },
+        ]);
+      }
+    });
+  };
+
+  useEffect(() => {
+    CheckAuth().then((data) => {
+      if (data == -1) {
+        navigation.navigate("Login");
+      } else {
+        setDataUser(data);
+        getData(data.remember_token);
+      }
+    });
+  }, []);
 
   const openLight = () => {
-    setLight(1-light);
+    setLight(1 - light);
   };
 
   return (
@@ -50,9 +90,9 @@ const List = ({ navigation }) => {
         source={require("../lib/img/background.png")}
         style={{ width: width, height: height }}
       >
-        <ScrollView>
-          <View style={{ alignItems: "center", width: width }}>
-            {list.map((l, i) => (
+        <ScrollView >
+          <View style={styles.viewTop}>
+            {/* {list.map((l, i) => (
               <ListItem
                 key={i}
                 bottomDivider
@@ -85,7 +125,50 @@ const List = ({ navigation }) => {
                 </ListItem.Content>
                 <ListItem.Chevron color={"#fff"}></ListItem.Chevron>
               </ListItem>
-            ))}
+            ))} */}
+            <View style={styles.item}>
+              <ImageBackground
+                source={require("../lib/img/sky.jpeg")}
+                style={styles.itemBG}
+                imageStyle={{ opacity: 0.23 }}
+              >
+                <Text style={styles.txtTitle}>Nhiệt độ</Text>
+                <Text style={styles.txtContent}>
+                  {dataList.temp}
+                  <Icon name="temperature-celsius" size={29} />
+                </Text>
+              </ImageBackground>
+            </View>
+            <View style={styles.item}>
+              <ImageBackground
+                source={require("../lib/img/gas.png")}
+                style={styles.itemBG}
+                imageStyle={{ opacity: 0.23 }}
+              >
+                <Text style={styles.txtTitle}>Nồng độ gas</Text>
+                <Text style={styles.txtContent}>{dataList.gas}%</Text>
+              </ImageBackground>
+            </View>
+            <View style={styles.item}>
+              <ImageBackground
+                source={require("../lib/img/loa.jpeg")}
+                style={styles.itemBG}
+                imageStyle={{ opacity: 0.23 }}
+              >
+                <Text style={styles.txtTitle}>Độ ồn</Text>
+                <Text style={styles.txtContent}>28 dB</Text>
+              </ImageBackground>
+            </View>
+            <View style={styles.item}>
+              <ImageBackground
+                source={require("../lib/img/rain.jpeg")}
+                style={styles.itemBG}
+                imageStyle={{ opacity: 0.23 }}
+              >
+                <Text style={styles.txtTitle}>Lượng mưa</Text>
+                <Text style={styles.txtContent}>28%</Text>
+              </ImageBackground>
+            </View>
           </View>
           <View style={styles.viewLight}>
             <Icon
@@ -138,12 +221,21 @@ const List = ({ navigation }) => {
 };
 
 const styles = StyleSheet.create({
+  viewTop: {
+    flex: 1,
+    width: width,
+    paddingHorizontal: 28,
+    flexDirection: "row",
+    flexWrap: "wrap",
+    justifyContent: "space-between",
+    marginTop: 28,
+  },
   viewLight: {
     width: width,
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
-    marginTop: 32,
+    marginTop: 12,
   },
   btnLight: {
     paddingHorizontal: 28,
@@ -151,6 +243,30 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     backgroundColor: "red",
     marginTop: 20,
+  },
+  item: {
+    width: width * 0.5 - 36,
+    height: width * 0.5 - 36,
+    marginBottom: 20,
+    borderRadius: 16,
+    borderWidth: 1,
+    borderColor: "#4592df",
+  },
+  itemBG: {
+    width: width * 0.5 - 38,
+    height: width * 0.5 - 38,
+    borderRadius: 16,
+    overflow: "hidden",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  txtTitle: {
+    fontSize: 22,
+    fontWeight: "bold",
+  },
+  txtContent: {
+    fontSize: 32,
+    fontWeight: "bold",
   },
 });
 
