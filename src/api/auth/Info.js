@@ -1,6 +1,6 @@
 
 const user = (token) => (
-    fetch(`http://192.168.5.206:8080/api/user-info`, {
+    fetch(`http://192.168.1.11:8080/api/user-info`, {
         method: 'GET',
         headers: {
             'Accept': 'application/json',

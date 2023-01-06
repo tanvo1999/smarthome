@@ -10,6 +10,7 @@ import {
   Alert,
   RefreshControl,
 } from "react-native";
+import { useIsFocused } from '@react-navigation/native';
 import Icon from "react-native-vector-icons/FontAwesome";
 import Tooltip from "rn-tooltip";
 
@@ -25,6 +26,7 @@ const Notification = ({ navigation }) => {
   const [dataUser, setDataUser] = useState({});
   const [refreshing, setRefreshing] = useState(false);
   const [loading, setLoading] = useState(true);
+  const isFocused = useIsFocused();
 
   const refresh = () => {
     setLoading(true);
@@ -41,7 +43,7 @@ const Notification = ({ navigation }) => {
         getData(data.remember_token);
       }
     });
-  }, []);
+  }, [isFocused]);
 
   const getData = (remember_token) => {
     GetNotification(remember_token).then((data) => {

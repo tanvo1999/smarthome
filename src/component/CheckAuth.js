@@ -8,7 +8,7 @@ const data = async (route) => {
     const parseData = JSON.parse(dataAsync);
     if (parseData !== null) {
         const checkAuth = Info(parseData.remember_token).then((data) => {
-            if (data.code == 401) {
+            if (data.code == 401 || data == 'Khong dang nhap') {
                 return -1;
             }
             return data;

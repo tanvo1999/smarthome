@@ -1,5 +1,5 @@
-const temp = (token) => (
-    fetch(`http://192.168.1.11:8080/api/temp/data`, {
+const light = (token) => (
+    fetch(`http://192.168.1.11:8080/api/lights/data`, {
         method: 'GET',
         headers: {
             'Accept': 'application/json',
@@ -9,4 +9,4 @@ const temp = (token) => (
     }).then((response) => response.json())
 );
 
-export default temp
+export default light

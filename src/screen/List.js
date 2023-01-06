@@ -10,13 +10,18 @@ import {
   TouchableOpacity,
   Text,
   Alert,
+  RefreshControl,
 } from "react-native";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import LinearGradient from "react-native-linear-gradient";
 import TouchableScale from "react-native-touchable-scale";
+import { useIsFocused } from '@react-navigation/native';
 
 import DataTemp from "../api/data/Temp";
 import DataGas from "../api/data/Gas";
+import DataLight from "../api/data/Light";
+import TurnOnLight from "../api/control/TurnOnLight";
+import TurnOffLight from "../api/control/TurnOffLight";
 import CheckAuth from "../component/CheckAuth";
 import Loading from "../component/Loading";
 
@@ -31,9 +36,10 @@ const List = ({ navigation }) => {
   const [dataList, setDataList] = useState({
     temp: "",
     gas: "",
-    rain: 28,
-    sound: 12,
+    rain: 0,
+    sound: 0,
   });
+  const isFocused = useIsFocused();
 
   const refresh = () => {
     setLoading(true);
@@ -67,6 +73,16 @@ const List = ({ navigation }) => {
         ]);
       }
     });
+    DataLight(remember_token).then((data) => {
+      if (data.status === "success") {
+        setLight(data.data.temp);
+        setLoading(false);
+      } else {
+        Alert.alert("Lỗi", "Không thể lấy được dữ liệu của khí gas!", [
+          { text: "Đóng" },
+        ]);
+      }
+    });
   };
 
   useEffect(() => {
@@ -78,10 +94,39 @@ const List = ({ navigation }) => {
         getData(data.remember_token);
       }
     });
+  }, [isFocused]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if(typeof(dataUser.remember_token) !== 'undefined') {
+        getData(dataUser.remember_token);
+      }
+    }, 2000);
+    return () => clearInterval(interval);
   }, []);
 
-  const openLight = () => {
-    setLight(1 - light);
+  const openLight = (status) => {
+    if (status == 1) {
+      TurnOffLight(dataUser.remember_token).then((data) => {
+        if (data.status == "success") {
+          setLight(0);
+        } else {
+          Alert.alert("Thông báo", "Có lỗi xảy ra, vui lòng thử lại!", [
+            { text: "Đóng" },
+          ]);
+        }
+      });
+    } else {
+      TurnOnLight(dataUser.remember_token).then((data) => {
+        if (data.status == "success") {
+          setLight(1);
+        } else {
+          Alert.alert("Thông báo", "Có lỗi xảy ra, vui lòng thử lại!", [
+            { text: "Đóng" },
+          ]);
+        }
+      });
+    }
   };
 
   return (
@@ -90,7 +135,11 @@ const List = ({ navigation }) => {
         source={require("../lib/img/background.png")}
         style={{ width: width, height: height }}
       >
-        <ScrollView >
+        <ScrollView
+          refreshControl={
+            <RefreshControl onRefresh={refresh} refreshing={refreshing} />
+          }
+        >
           <View style={styles.viewTop}>
             {/* {list.map((l, i) => (
               <ListItem
@@ -177,7 +226,7 @@ const List = ({ navigation }) => {
               color={light == 1 ? "yellow" : "black"}
             />
             <ListItem
-              onPress={() => openLight()}
+              onPress={() => openLight(light)}
               Component={TouchableScale}
               friction={90}
               tension={100}

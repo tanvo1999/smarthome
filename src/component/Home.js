@@ -62,7 +62,6 @@ const TitleContent = ({navigation, name, icon , catshow}) => {
   const [selectCat, setSelectCat] = useState({ title: 'Tất Cả', val: 0 });
 
   const onPressItem = (item) => {
-    console.log(item)
     setSelectCat(item);
     setIsVisible(false);
   }
