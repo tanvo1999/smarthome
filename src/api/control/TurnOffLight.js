@@ -1,5 +1,5 @@
 const light = (token) => (
-    fetch(`http://192.168.1.11:8080/api/lights/turn-off`, {
+    fetch(`http://192.168.43.207:8080/api/lights/turn-off`, {
         method: 'POST',
         headers: {
             'Accept': 'application/json',

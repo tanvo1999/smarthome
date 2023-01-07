@@ -15,10 +15,21 @@ import {
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import LinearGradient from "react-native-linear-gradient";
 import TouchableScale from "react-native-touchable-scale";
-import { useIsFocused } from '@react-navigation/native';
+import { useIsFocused } from "@react-navigation/native";
+import {
+  Chart,
+  Line,
+  Area,
+  HorizontalAxis,
+  VerticalAxis,
+  Tooltip,
+} from "react-native-responsive-linechart";
+import moment from "moment";
 
 import DataTemp from "../api/data/Temp";
+import ChartTemp from "../api/data/TempChart";
 import DataGas from "../api/data/Gas";
+import ChartGas from "../api/data/GasChart";
 import DataLight from "../api/data/Light";
 import TurnOnLight from "../api/control/TurnOnLight";
 import TurnOffLight from "../api/control/TurnOffLight";
@@ -34,11 +45,13 @@ const List = ({ navigation }) => {
   const [loading, setLoading] = useState(true);
   const [light, setLight] = useState(1);
   const [dataList, setDataList] = useState({
-    temp: "",
-    gas: "",
+    temp: "--",
+    gas: "--",
     rain: 0,
     sound: 0,
   });
+  const [dataChart, setDataChart] = useState([]);
+  const [dataChartGas, setDataChartGas] = useState([]);
   const isFocused = useIsFocused();
 
   const refresh = () => {
@@ -73,6 +86,12 @@ const List = ({ navigation }) => {
         ]);
       }
     });
+    ChartTemp(remember_token).then((data) => {
+      setDataChart(data.data.reverse());
+    });
+    ChartGas(remember_token).then((data) => {
+      setDataChartGas(data.data.reverse());
+    });
     DataLight(remember_token).then((data) => {
       if (data.status === "success") {
         setLight(data.data.temp);
@@ -98,10 +117,10 @@ const List = ({ navigation }) => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      if(typeof(dataUser.remember_token) !== 'undefined') {
+      if (typeof dataUser.remember_token !== "undefined") {
         getData(dataUser.remember_token);
       }
-    }, 2000);
+    }, 10000);
     return () => clearInterval(interval);
   }, []);
 
@@ -263,6 +282,152 @@ const List = ({ navigation }) => {
               </ListItem.Content>
             </ListItem>
           </View>
+          {dataChart.length > 0 ? <View style={styles.chart}>
+            <Chart
+              style={{ height: width * 0.6912 - 36, width: width - 36 }}
+              data={[
+                { x: 0, y: dataChart[0]["temp"] },
+                { x: 1, y: dataChart[1]["temp"] },
+                { x: 2, y: dataChart[2]["temp"] },
+                { x: 3, y: dataChart[3]["temp"] },
+                { x: 4, y: dataChart[4]["temp"] },
+                { x: 5, y: dataChart[5]["temp"] },
+                { x: 6, y: dataChart[6]["temp"] },
+                { x: 7, y: dataChart[7]["temp"] },
+              ]}
+              padding={{ left: 40, bottom: 20, right: 20, top: 20 }}
+              xDomain={{ min: 0, max: 7 }}
+              yDomain={{
+                min: 0,
+                max: 100,
+              }}
+            >
+              <VerticalAxis
+                tickCount={5}
+                theme={{
+                  labels: {
+                    formatter: (v) => v.toFixed(0),
+                    label: { color: "#262740", dx: -10 },
+                  },
+                }}
+              />
+              <HorizontalAxis
+                tickCount={8}
+                theme={{
+                  labels: {
+                    formatter: (v) =>
+                      moment(dataChart[v]["time"]).format("HH:mm:ss"),
+                    label: { color: "#000", dy: -16 },
+                  },
+                }}
+              />
+              <Area
+                theme={{
+                  gradient: {
+                    from: { color: "#0F76F5" },
+                    to: { color: "#0F76F5", opacity: 0.2 },
+                  },
+                }}
+                smoothing="bezier"
+              />
+              <Line
+                tooltipComponent={
+                  <Tooltip
+                    theme={{
+                      label: {
+                        color: "black",
+                      },
+                      shape: {
+                        color: "white",
+                      },
+                    }}
+                  />
+                }
+                smoothing="bezier"
+                theme={{
+                  stroke: { color: "#0F76F5", width: 5 },
+                  scatter: {
+                    default: { width: 5, height: 5, rx: 4, color: "#0F76F5" },
+                    selected: { width: 12, height: 12, color: "red" },
+                  },
+                }}
+              />
+            </Chart>
+            <Text style={{fontWeight: 'bold', marginTop: 10}}>Biểu đồ nhiệt độ</Text>
+          </View>: null}
+          {dataChartGas.length > 0 ? <View style={[styles.chart,{marginTop: -140}]}>
+            <Chart
+              style={{ height: width * 0.6912 - 36, width: width - 36 }}
+              data={[
+                { x: 0, y: dataChartGas[0]["temp"] },
+                { x: 1, y: dataChartGas[1]["temp"] },
+                { x: 2, y: dataChartGas[2]["temp"] },
+                { x: 3, y: dataChartGas[3]["temp"] },
+                { x: 4, y: dataChartGas[4]["temp"] },
+                { x: 5, y: dataChartGas[5]["temp"] },
+                { x: 6, y: dataChartGas[6]["temp"] },
+                { x: 7, y: dataChartGas[7]["temp"] },
+              ]}
+              padding={{ left: 40, bottom: 20, right: 20, top: 20 }}
+              xDomain={{ min: 0, max: 7 }}
+              yDomain={{
+                min: 0,
+                max: 10,
+              }}
+            >
+              <VerticalAxis
+                tickCount={5}
+                theme={{
+                  labels: {
+                    formatter: (v) => v.toFixed(0),
+                    label: { color: "#262740", dx: -10 },
+                  },
+                }}
+              />
+              <HorizontalAxis
+                tickCount={8}
+                theme={{
+                  labels: {
+                    formatter: (v) =>
+                      moment(dataChartGas[v]["time"]).format("HH:mm:ss"),
+                    label: { color: "#000", dy: -16 },
+                  },
+                }}
+              />
+              <Area
+                theme={{
+                  gradient: {
+                    from: { color: "#0F76F5" },
+                    to: { color: "#0F76F5", opacity: 0.2 },
+                  },
+                }}
+                smoothing="bezier"
+              />
+              <Line
+                tooltipComponent={
+                  <Tooltip
+                    theme={{
+                      label: {
+                        color: "black",
+                      },
+                      shape: {
+                        color: "white",
+                      },
+                    }}
+                  />
+                }
+                smoothing="bezier"
+                theme={{
+                  stroke: { color: "#0F76F5", width: 5 },
+                  scatter: {
+                    default: { width: 5, height: 5, rx: 4, color: "#0F76F5" },
+                    selected: { width: 12, height: 12, color: "red" },
+                  },
+                }}
+              />
+            </Chart>
+            <Text style={{fontWeight: 'bold', marginTop: 10}}>Biểu đồ khí gas</Text>
+          </View>: null}
         </ScrollView>
       </ImageBackground>
     </SafeAreaView>
@@ -317,6 +482,13 @@ const styles = StyleSheet.create({
     fontSize: 32,
     fontWeight: "bold",
   },
+  chart: {
+    width: width,
+    height: 400,
+    alignItems: 'center',
+    marginTop: 26,
+    marginBottom: 30
+  }
 });
 
 export default List;

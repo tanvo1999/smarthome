@@ -28,9 +28,11 @@
     "react-native-indicators": "^0.17.0",
     "react-native-linear-gradient": "^2.5.6",
     "react-native-reanimated": "^2.2.0",
+    "react-native-responsive-linechart": "^5.7.1",
     "react-native-safe-area-context": "^3.2.0",
     "react-native-screens": "^3.3.0",
     "react-native-splash-screen": "^3.2.0",
+    "react-native-svg": "^13.6.0",
     "react-native-touchable-scale": "^2.1.2",
     "react-native-vector-icons": "^8.1.0",
     "rn-tooltip": "^3.0.1"

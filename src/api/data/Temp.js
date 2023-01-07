@@ -1,5 +1,5 @@
 const temp = (token) => (
-    fetch(`http://192.168.1.11:8080/api/temp/data`, {
+    fetch(`http://192.168.43.207:8080/api/temp/data`, {
         method: 'GET',
         headers: {
             'Accept': 'application/json',

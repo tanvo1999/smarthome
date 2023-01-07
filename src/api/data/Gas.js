@@ -1,5 +1,5 @@
 const gas = (token) => (
-    fetch(`http://192.168.1.11:8080/api/gas/data`, {
+    fetch(`http://192.168.43.207:8080/api/gas/data`, {
         method: 'GET',
         headers: {
             'Accept': 'application/json',

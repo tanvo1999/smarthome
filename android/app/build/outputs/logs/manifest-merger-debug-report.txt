@@ -19,6 +19,7 @@ MERGED from [:react-native-device-info] /Users/vominhtan/Documents/study/DADN/sm
 MERGED from [:react-native-gesture-handler] /Users/vominhtan/Documents/study/DADN/smarthome/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-safe-area-context] /Users/vominhtan/Documents/study/DADN/smarthome/node_modules/react-native-safe-area-context/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-screens] /Users/vominhtan/Documents/study/DADN/smarthome/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-svg] /Users/vominhtan/Documents/study/DADN/smarthome/node_modules/react-native-svg/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-vector-icons] /Users/vominhtan/Documents/study/DADN/smarthome/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [:@react-native-firebase_app] /Users/vominhtan/Documents/study/DADN/smarthome/node_modules/@react-native-firebase/app/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-29:12
 MERGED from [com.facebook.react:react-native:0.64.2] /Users/vominhtan/.gradle/caches/transforms-2/files-2.1/211c4d7460bebcded6694ba81e5368cf/jetified-react-native-0.64.2/AndroidManifest.xml:2:1-13:12
@@ -288,6 +289,8 @@ MERGED from [:react-native-safe-area-context] /Users/vominhtan/Documents/study/D
 MERGED from [:react-native-safe-area-context] /Users/vominhtan/Documents/study/DADN/smarthome/node_modules/react-native-safe-area-context/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-screens] /Users/vominhtan/Documents/study/DADN/smarthome/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-screens] /Users/vominhtan/Documents/study/DADN/smarthome/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-svg] /Users/vominhtan/Documents/study/DADN/smarthome/node_modules/react-native-svg/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-svg] /Users/vominhtan/Documents/study/DADN/smarthome/node_modules/react-native-svg/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-vector-icons] /Users/vominhtan/Documents/study/DADN/smarthome/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-vector-icons] /Users/vominhtan/Documents/study/DADN/smarthome/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:@react-native-firebase_app] /Users/vominhtan/Documents/study/DADN/smarthome/node_modules/@react-native-firebase/app/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41

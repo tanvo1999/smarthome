@@ -147,6 +147,7 @@
     <orderEntry type="module" module-name="TieuThuyetVN.react-native-linear-gradient" />
     <orderEntry type="module" module-name="TieuThuyetVN.react-native-safe-area-context" />
     <orderEntry type="module" module-name="TieuThuyetVN.react-native-screens" />
+    <orderEntry type="module" module-name="TieuThuyetVN.react-native-svg" />
     <orderEntry type="module" module-name="TieuThuyetVN.react-native-vector-icons" />
   </component>
 </module>

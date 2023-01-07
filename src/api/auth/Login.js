@@ -1,5 +1,5 @@
 const login = (email, password, fcm_token, os, id, name) => (
-    fetch(`http://192.168.1.11:8080/api/login`, {
+    fetch(`http://192.168.43.207:8080/api/login`, {
         method: 'POST',
         headers: {
             'Accept': 'application/json',
